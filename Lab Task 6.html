@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Task 6</title>
+</head>
+<body>
+    <table border="1" align="centre" id="tbl">
+        <th>Sr.No </th>
+        <th>Registration No</th>
+        <th>Name</th>
+    </table>
+<script>
+    const studentinfo =[ {
+        SR:'1',
+        reg:'07MDSWE0200',
+        name:'Humayun'},
+        {
+        SR:'2',
+        reg:'07MDSWE0222',
+        name:'Kashif'},
+        {
+        SR:'3',
+        reg:'07MDSWE0228',
+        name:'Sohail'},
+        {
+        SR:'4',
+        reg:'07MDSWE0240',
+        name:'Shahzaib'},
+        ]
+
+studentinfo.forEach(student => {
+        let tbldata = document.getElementById('tbl');
+        let tbl_new_row= document.createElement('tr');
+        
+        for (let key in student) {
+        var tbl_new_data= document.createElement('td');
+        var new_table_sr= document.createTextNode(student[key]);
+        tbl_new_data.appendChild(new_table_sr);
+        tbl_new_row.appendChild(tbl_new_data);
+  }
+        tbldata.appendChild(tbl_new_row);
+})
+</script>
+</body>
+</html>
